@@ -1,0 +1,287 @@
+/* Reset y fuentes básicas */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333;
+  font-family: 'Schoolbell', cursive;
+}
+
+/* Encabezado */
+header {
+ /* background-color: #005fa3;*/
+  color: #92f1e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.perfil-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Contenedor general */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 20px;
+  min-height: 80vh;
+}
+
+/* Menú lateral */
+.div1 {
+  flex: 1 1 200px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  max-width: 80vh;
+}
+
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 45px;
+  font-family: 'Schoolbell', cursive;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  color: #232323;
+  background-color: #4dd7fa;
+  transition: transform 0.2s ease;
+  font-size: xx-large;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  
+
+}
+
+.btn i{
+  font-size: 20px;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.btn img {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 20px;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.azul { 
+    background-color: #4dd7fa; 
+}
+.verde { background-color: #28a745; }
+.amarillo { background-color: #ffc107; color: black; }
+.rojo { background-color: #dc3545; }
+
+/* Formulario de donación */
+.div2 {
+  /* flex: 2 1 400px;*/
+   flex:1 1 100px;
+}
+
+.formulario {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 650px;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario h2 {
+  color: #005fa3;
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.opciones button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border:none;
+  border-radius: 10px;
+  background-color: #00cfff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.opciones button:hover{
+    background-color: #009ecf;
+}
+.opciones button.activo {
+  background-color: #ff5c5c;
+}
+
+.opciones button:nth-child(4){
+    background-color: #00cfff;
+}
+select.opciones {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.donacion {
+  padding: 12px;
+  background-color: #00cfff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.imagen-nino {
+  width: 100%;
+  max-width: 300px;
+  align-self: center;
+}
+
+/* Información adicional */
+.div3 {
+  flex: 1 1 250px;
+}
+
+.info {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Pie de página */
+footer {
+  background-color: #005fa3;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  margin-top: 30px;
+}
+
+.redes a img {
+  width: 25px;
+  margin: 0 8px;
+}
+
+.ayuda {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  font-size: 1.2rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/*Iconos*/
+.fa-house{
+    background-color: #4dd7fa;
+}
+
+/* Media queries para responsive design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .div1,
+  .div2,
+  .div3 {
+    flex: 1 1 auto;
+    width: 90%;
+    height: 90%;
+    margin-bottom: 15px;
+  }
+
+  .menu {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .perfil {
+    align-self: flex-end;
+  }
+
+  .formulario h2 {
+    font-size: 1.2rem;
+  }
+
+  .opciones {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+
+
